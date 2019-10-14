@@ -1,0 +1,166 @@
+* {
+  outline: none;
+}
+
+.off-canvas-content {
+  background: #f6f6f6;
+}
+
+.close-button,
+.close-button span {
+  color: #f6f6f6;
+
+  &:hover,
+  &:focus {
+    color: rgba(238, 96, 19, 1) !important;
+  }
+}
+
+.group-logo {
+  padding-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  @include breakpoint(large up) {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.cell img {
+  @include breakpoint(large down) {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.grid-x {
+  @include breakpoint(small only) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.navigation {
+  @include breakpoint(large up) {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.the_logo {
+  position: absolute;
+  width: 100%;
+  top: 0.5rem;
+  left: 0;
+  z-index: 999;
+
+  img {
+    margin-left: 16rem;
+  }
+}
+
+.off-canvas,
+.navigation {
+  background: #19335e;
+
+  li:not(:first-of-type):hover {
+    background: #f6f6f6;
+  }
+
+  a {
+    font-size: 0.9rem;
+    color: rgba(231, 231, 231, 1);
+    text-transform: uppercase;
+
+    &:hover {
+      color: rgba(238, 96, 19, 1);
+    }
+  }
+}
+
+.off-canvas {
+  ul {
+    @include breakpoint(large up) {
+      padding-top: 5rem;
+    }
+  }
+}
+
+.top-bar {
+  background: transparent;
+  ul {
+    background: transparent;
+  }
+
+  a {
+    font-size: 0.9rem;
+    color: rgba(231, 231, 231, 1);
+    text-transform: uppercase;
+  }
+}
+
+.home-page {
+  background: #f6f6f6;
+  padding-bottom: 2rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  //height: 100vh;
+
+  @include breakpoint(large up) {
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  .content {
+    margin-top: 2rem;
+
+    img {
+      @include breakpoint(large) {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    p {
+      @include breakpoint(large) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        line-height: 1.7;
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  .redirect {
+    background: rgba(238, 96, 19, 1);
+    border-radius: 7px;
+
+    &:hover {
+      background: transparent;
+      border: 2px solid rgba(238, 96, 19, 1);
+      color: rgba(238, 96, 19, 1);
+    }
+
+    @include breakpoint(small only) {
+      position: absolute;
+      @include horizontal-center;
+    }
+  }
+
+  img {
+    @include breakpoint(small only) {
+      // width: 70%;
+      margin: -0.5rem auto 0 auto;
+      display: block;
+    }
+  }
+}
+
+.cta {
+  margin-bottom: 3rem;
+}
