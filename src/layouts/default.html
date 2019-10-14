@@ -22,7 +22,9 @@
       </div>
     </div>
     <div class="the_logo show-for-medium">
-      <img src="../assets/img/logo-small.png" alt="" />
+      <a href="{{ root }}index.html"
+        ><img src="../assets/img/logo-small.png" alt=""
+      /></a>
     </div>
     <div class="off-canvas-wrapper">
       <div
@@ -31,19 +33,19 @@
         data-off-canvas
         data-transition="overlap"
       >
-        <button
+        <!-- <button
           class="close-button"
           aria-label="Close menu"
           type="button"
           data-close
         >
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
 
         <ul class="menu vertical">
           <li class="hide-for-medium">
-            <a href="/">
-              <img src="../assets/img/logo-medium.png" alt="" />
+            <a href="{{ root }}index.html">
+              <img src="{{ root }}assets/img/logo-xlarge.png" alt="" />
             </a>
           </li>
           <li><a href="index.html">Home</a></li>
@@ -55,6 +57,7 @@
       </div>
       <div class="off-canvas-content" data-off-canvas-content>
         {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+        {{> sidebar-button}}
         {{> body}}
       </div>
     </div>
