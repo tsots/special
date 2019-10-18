@@ -6,7 +6,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katalist | {{ page_name }}</title>
+    <title>
+      {{#unlesspage 'index'}}Katalist | {{ page_name }}{{/unlesspage}}
+      {{#ifpage 'index'}} Katalist Communications{{/ifpage}}
+    </title>
     <link rel="stylesheet" href="{{ root }}assets/css/app.css" />
   </head>
   <body class="{{ body_class }}">
@@ -49,19 +52,19 @@
             </a>
           </li>
           <li class="{{#ifpage 'index'}} active {{/ifpage}}">
-            <a href="index.html">Home</a>
+            <a href="{{ root }}index.html">Home</a>
           </li>
           <li class="{{#ifpage 'about'}} active {{/ifpage}}">
-            <a href="#">About</a>
+            <a href="{{ root }}about.html">About</a>
           </li>
           <li class="{{#ifpage 'identity'}} active {{/ifpage}}">
-            <a href="identity.html">Identity</a>
+            <a href="{{ root }}identity.html">Identity</a>
           </li>
           <li class="{{#ifpage 'digital'}} active {{/ifpage}}">
-            <a href="digital.html">Digital</a>
+            <a href="{{ root }}digital.html">Digital</a>
           </li>
           <li class="{{#ifpage 'contact'}} active {{/ifpage}}" }}>
-            <a href="#">Contact</a>
+            <a href="{{ root }}contact.html">Contact</a>
           </li>
         </ul>
       </div>
