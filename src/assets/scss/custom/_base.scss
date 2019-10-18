@@ -272,3 +272,68 @@ h3 {
     padding-bottom: 5rem;
   }
 }
+
+.intro {
+  margin-bottom: 4rem;
+}
+section {
+  img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 4rem;
+
+    @include breakpoint(large up) {
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+#personal-branding {
+  img.show-for-large {
+    width: 50%;
+  }
+  .image {
+    @include breakpoint(large up) {
+      text-align: center;
+    }
+  }
+}
+
+#ui-design {
+  img.show-for-large {
+    width: 70%;
+  }
+  .image {
+    @include breakpoint(large up) {
+      text-align: center;
+    }
+  }
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
+  background: darken(#f3f3f3, 3);
+  border-radius: 1rem;
+
+  h3.title {
+    padding-top: 1rem;
+  }
+
+  .grid-x {
+    height: 100%;
+  }
+
+  .text {
+    align-self: center;
+  }
+}
+
+.menu .active > a {
+  background: darken(#f6f6f6, 10);
+  color: rgba(238, 96, 19, 1);
+}

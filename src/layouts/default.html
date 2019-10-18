@@ -6,10 +6,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation for Sites</title>
+    <title>Katalist | {{ page_name }}</title>
     <link rel="stylesheet" href="{{ root }}assets/css/app.css" />
   </head>
-  <body>
+  <body class="{{ body_class }}">
     <div class="navigation show-for-medium">
       <div class="grid-container">
         <div class="top-bar">
@@ -23,7 +23,7 @@
     </div>
     <div class="the_logo show-for-medium">
       <a href="{{ root }}index.html"
-        ><img src="../assets/img/logo-small.png" alt=""
+        ><img src="{{ root }}assets/img/logo-small.svg" alt=""
       /></a>
     </div>
     <div class="off-canvas-wrapper">
@@ -45,14 +45,24 @@
         <ul class="menu vertical">
           <li class="hide-for-medium">
             <a href="{{ root }}index.html">
-              <img src="{{ root }}assets/img/logo-xlarge.png" alt="" />
+              <img src="{{ root }}assets/img/logo-xlarge.svg" alt="" />
             </a>
           </li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="identity.html">Identity</a></li>
-          <li><a href="digital.html">Digital</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="{{#ifpage 'index'}} active {{/ifpage}}">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="{{#ifpage 'about'}} active {{/ifpage}}">
+            <a href="#">About</a>
+          </li>
+          <li class="{{#ifpage 'identity'}} active {{/ifpage}}">
+            <a href="identity.html">Identity</a>
+          </li>
+          <li class="{{#ifpage 'digital'}} active {{/ifpage}}">
+            <a href="digital.html">Digital</a>
+          </li>
+          <li class="{{#ifpage 'contact'}} active {{/ifpage}}" }}>
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="off-canvas-content" data-off-canvas-content>
