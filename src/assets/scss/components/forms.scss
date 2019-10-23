@@ -1,0 +1,28 @@
+form {
+  background: #fff;
+  padding: 1.74rem 1.74rem;
+  border-radius: 7px;
+  box-shadow: 0 0.1rem 2px rgba(0, 0, 0, 0.4);
+  .form-icons {
+    text-align: center;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    .input-group-label {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+
+    .input-group-field,
+    .textarea-group-field {
+      border-color: $primary-color;
+    }
+
+    .fa {
+      color: white;
+      width: 1rem; // makes the width of icon labels equal
+    }
+  }
+}
