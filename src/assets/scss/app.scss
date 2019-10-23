@@ -1,5 +1,10 @@
 @charset 'utf-8';
 
+@import './fonts/fontawesome/fontawesome.scss';
+@import './fonts/fontawesome/regular.scss';
+@import './fonts/fontawesome/solid.scss';
+@import './fonts/fontawesome/brands.scss';
+@import './custom/functions';
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';

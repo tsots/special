@@ -337,3 +337,19 @@ section {
   background: darken(#f6f6f6, 10);
   color: rgba(238, 96, 19, 1);
 }
+
+.contact-page {
+  .content {
+    padding-top: 4rem;
+    text-align: center;
+  }
+}
+
+.color-bg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.47rem;
+  padding-right: 1.47rem;
+  background-color: green;
+  color: text-color(green);
+}

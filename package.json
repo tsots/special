@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Official ZURB Template for Foundation for Sites.",
   "main": "gulpfile.babel.js",
+  "homepage": "https://tsots.github.io/special",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --production"
+    "build": "gulp build --production",
+    "deploy": "gh-pages -d dist"
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
