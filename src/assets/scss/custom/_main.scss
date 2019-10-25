@@ -1,0 +1,155 @@
+@import url('https://use.typekit.net/ipg5kut.css');
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('ttf'),
+    url('../fonts/Montserrat/Montserrat-Medium.ttf') format('ttf'),
+    url('../fonts/Montserrat/Montserrat-Bold.ttf') format('ttf');
+}
+
+* {
+  outline: none;
+}
+
+p,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  line-height: 2;
+  font-weight: 400;
+}
+
+.navigation {
+  background-color: #19335e;
+}
+
+.nav-container-sticky {
+  z-index: 99;
+  height: auto;
+
+  .top-bar {
+    .menu a {
+      padding: 0rem 0.5rem;
+    }
+  }
+}
+
+.off-canvas-content {
+  @include breakpoint(large) {
+    padding-top: 2.5rem;
+  }
+}
+
+.intro {
+  padding-bottom: 3rem;
+  .group-logo {
+    text-align: center;
+
+    img {
+      margin-top: 1rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include breakpoint(large) {
+    padding-top: 3rem;
+
+    .group-logo {
+      img {
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include breakpoint(large) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+section:not(:last-of-type) {
+  @include breakpoint(large) {
+    margin-bottom: 3rem;
+  }
+}
+
+//    z-index: 99;
+
+.image,
+.cell img {
+  text-align: center;
+
+  @include breakpoint(medium down) {
+    margin-bottom: 1rem;
+  }
+}
+
+.title {
+  @include breakpoint(small only) {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+  }
+}
+
+#personal-branding {
+  img.show-for-large {
+    width: 50%;
+  }
+  .image {
+    @include breakpoint(large up) {
+      text-align: center;
+    }
+  }
+}
+
+#ui-design {
+  img.show-for-large {
+    width: 70%;
+  }
+  .image {
+    @include breakpoint(large up) {
+      text-align: center;
+    }
+  }
+}
+
+.page-links li.hide-for-medium a {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: lighten($menu-background, 10);
+}
+
+.sidebar-reveal {
+  position: fixed;
+  z-index: 9;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.7rem;
+  justify-content: space-between;
+  background-color: $menu-background;
+  & > div {
+    border: 0.02rem solid white;
+    width: 1.5rem;
+    margin: 0.2rem 0;
+  }
+  &:hover {
+    background: rgba(238, 96, 19, 1);
+    & > div {
+      border: 0.02rem solid black;
+    }
+  }
+}

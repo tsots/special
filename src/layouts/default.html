@@ -13,21 +13,74 @@
     <link rel="stylesheet" href="{{ root }}assets/css/app.css" />
   </head>
   <body class="{{ body_class }}">
-    <div class="navigation show-for-medium">
-      <div class="grid-container">
-        <div class="top-bar">
-          <div class="top-bar-right">
-            <ul class="menu right-menu">
-              <li><a href="#">Tsotetsi</a></li>
-            </ul>
+    <div class="nav-container-sticky" data-sticky-container>
+      <div
+        class="navigation show-for-medium"
+        data-sticky
+        data-margin-top="0"
+        data-sticky
+        data-options="marginTop:0;"
+        data-top-anchor="1"
+      >
+        <div class="grid-container">
+          <div class="top-bar">
+            <div class="top-bar-left">
+              <div class="the_logo show-for-medium">
+                <a href="{{ root }}index.html"
+                  ><img src="{{ root }}assets/img/logo-small.svg" alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="top-bar-right">
+                            <ul class="dropdown menu" data-dropdown-menu>
+                  <!-- <li class="has-submenu"><a href="">Pages</a>
+                    <ul class="menu vertical" data-submenu>
+                                       <li class="{{#ifpage 'index'}} active {{/ifpage}}">
+                          <a href="{{ root }}index.html">Home</a>
+                        </li>
+                        <li class="{{#ifpage 'about'}} active {{/ifpage}}">
+                          <a href="{{ root }}about.html">About</a>
+                        </li>
+                        <li class="{{#ifpage 'identity'}} active {{/ifpage}}">
+                          <a href="{{ root }}identity.html">Identity</a>
+                        </li>
+                        <li class="{{#ifpage 'digital'}} active {{/ifpage}}">
+                          <a href="{{ root }}digital.html">Digital</a>
+                        </li>
+                        <li class="{{#ifpage 'contact'}} active {{/ifpage}}" }}>
+                          <a href="{{ root }}contact.html">Contact</a>
+                        </li>
+                    </ul> -->
+                    </li>
+                    <li class="{{#ifpage 'index'}} active {{/ifpage}}">
+                      <a href="{{ root }}index.html">Home</a>
+                    </li>
+                    <li class="{{#ifpage 'about'}} active {{/ifpage}}">
+                      <a href="{{ root }}about.html">About</a>
+                    </li>
+                    <li class="{{#ifpage 'identity'}} active {{/ifpage}}">
+                      <a href="{{ root }}identity.html">Identity</a>
+                    </li>
+                    <li class="{{#ifpage 'digital'}} active {{/ifpage}}">
+                      <a href="{{ root }}digital.html">Digital</a>
+                    </li>
+                    <li class="{{#ifpage 'contact'}} active {{/ifpage}}" }}>
+                      <a href="{{ root }}contact.html">Contact</a>
+                    </li>
+                <li>
+                  <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fas fa-envelope fa-2x"></i></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="the_logo show-for-medium">
-      <a href="{{ root }}index.html"
-        ><img src="{{ root }}assets/img/logo-small.svg" alt=""
-      /></a>
     </div>
     <div class="off-canvas-wrapper">
       <div
@@ -45,7 +98,7 @@
           <span aria-hidden="true">&times;</span>
         </button> -->
 
-        <ul class="menu vertical">
+        <ul class="menu vertical page-links">
           <li class="hide-for-medium">
             <a href="{{ root }}index.html">
               <img src="{{ root }}assets/img/logo-xlarge.svg" alt="" />
@@ -65,6 +118,17 @@
           </li>
           <li class="{{#ifpage 'contact'}} active {{/ifpage}}" }}>
             <a href="{{ root }}contact.html">Contact</a>
+          </li>
+        </ul>
+        <ul class="menu social-media">
+          <li>
+            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-envelope fa-2x"></i></a>
           </li>
         </ul>
       </div>

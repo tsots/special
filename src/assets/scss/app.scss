@@ -73,4 +73,6 @@
 @include motion-ui-animations;
 
 @import 'custom/base';
+@import 'custom/main';
+@import 'custom/pages/home';
 @import 'components/forms.scss';
